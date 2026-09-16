@@ -1,0 +1,200 @@
+body {
+    font-family: sans-serif;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1rem;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.page-image {
+    width: 200px;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button {
+    background-color: #4c04aa;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: auto;
+}
+
+.card img {
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.speech-card {
+    display: flex;
+    border: 2px solid black;
+    width: auto;
+    border-radius: 50px;
+    align-items: center;
+}
+
+.card-image {
+    flex: 0 0 30%;
+    padding: 1px;
+    width: 100%;
+}
+
+.card-text {
+    flex: 1;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.expandable-content-data,
+.expandable-content-process,
+.expandable-content-story {
+    display: none;
+    border: 1px solid grey;
+    opacity: 0.8;
+}
+
+.expandable-content-data.show,
+.expandable-content-process.show,
+.expandable-content-story.show {
+    animation: expand-content 1s ease-in-out forwards;
+}
+
+@keyframes expand-content {
+    from {
+        transform: scale(0.8, 0);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none
+}
+
+.hiddenPipelineDiv {
+    display: none;
+}
+
+.hiddenButtonDiv {
+    display: none;
+}
+
+.froyo-card:before {
+    content: "Subject: Sabotaging Ice Cream Figures!";
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+.froyo-card {
+    background-color: #f4fbff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.froyo-card p {
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.action-highlight {
+    font-weight: bold;
+    color: rgb(4, 194, 4);
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    grid-gap: 10px;
+    margin-bottom: 1rem;
+    width: auto
+}
+
+label {
+    width: auto
+}
+
+.input-field {
+    width: auto
+}
+
+.flex-container {
+    display: flex;
+}
+
+.image-container {
+    flex: 0 0 20%;
+    max-height: 100%;
+}
+
+.email-container {
+    max-width: 700px;
+    margin: 0 auto;
+}

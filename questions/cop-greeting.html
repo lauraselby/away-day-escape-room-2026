@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- prevent caching issue -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../assets/css/style.css" media="all">
+
+    <title>Statistics away day</title>
+
+</head>
+
+<body class="grey lighten-4">
+
+    <header>
+        <!-- <img src="assets/img/logo.png" alt="Website Logo"> -->
+        <h1>Statistics away day</h1>
+    </header>
+
+    <!-- Main Content -->
+
+    <div class="card speech-card flex-container">
+        <div class="card-image image-container">
+            <img src="../assets/img/happy.png" alt="Image Description">
+        </div>
+        <div class="card-text">
+            <p>Let's get started! </p>
+            <p>How about we quickly refresh on the important parts of the code of practice? I left it
+                around here somewhere...</p>
+            <p>It definitely wasn't me that spilled the tea all over it...</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+        <h2>An easy one to start, what words are we missing?</h2>
+        <p>(Remember to hit the check button on each line to confirm your answers)</p>
+
+        <form id="myForm">
+            <div class="form-group">
+                <label for="field1">6 letters:</label>
+                <input type="text" class="input-field" id="field1" name="field1" required>
+                <button type="button" class="btn" id="checkBtn1">Check</button>
+                <span id="tick1" style="color: #09f73c; font-size: 1.5em;" class="hidden">&#10004;</span>
+            </div>
+
+            <div class="form-group">
+                <label for="field2">11 letters:</label>
+                <input type="text" class="input-field" id="field2" name="field2" required>
+                <button type="button" class="btn" id="checkBtn2">Check</button>
+                <span id="tick2" style="color: #09f73c; font-size: 1.5em;" class="hidden">&#10004;</span>
+            </div>
+
+            <div class="form-group">
+                <label for="field3">8 letters:</label>
+                <input type="text" class="input-field" id="field3" name="field3" required>
+                <button type="button" class="btn" id="checkBtn3">Check</button>
+                <span id="tick3" style="color: #09f73c; font-size: 1.5em;" class="hidden">&#10004;</span>
+            </div>
+
+            <div class="form-group">
+                <label for="field4">10 letters:</label>
+                <input type="text" class="input-field" id="field4" name="field4" required>
+                <button type="button" class="btn" id="checkBtn4">Check</button>
+                <span id="tick4" style="color: #09f73c; font-size: 1.5em;" class="hidden">&#10004;</span>
+            </div>
+
+        </form>
+
+    </div>
+
+    <span style="color:#e41405; font-weight: bold;">
+        <p id="errorMessage"></p>
+    </span>
+
+    <br>
+
+    <div id=hiddenButtonDiv class="hiddenButtonDiv">
+        <div class="card speech-card flex-container">
+            <div class="card-image image-container">
+                <img src="../assets/img/happy.png" alt="Image Description">
+            </div>
+            <div class="card-text">
+                <p>Great work!! Lets move on to checking our data!</p>
+                <br>
+                <a href="../questions/quality-check.html" class="btn btn-puzzle z-depth-0 waves-effect">Investigate</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <img src="../assets/img/long-footer-colour.png" alt="Image Description">
+
+    <!-- Scripts -->
+    <script src="js/q1.js"></script>
+
+</body>
+
+</html>
