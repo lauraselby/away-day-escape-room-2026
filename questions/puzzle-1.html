@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- prevent caching issue -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../assets/css/style.css" media="all">
+
+    <title>Reboot Frederick - Puzzle 1</title>
+
+</head>
+
+<body class="grey lighten-4">
+
+    <header>
+        <img src="../assets/img/frederick.png" alt="Reboot Frederick logo" class="logo">
+        <h1>Reboot Frederick</h1>
+    </header>
+
+    <p class="progress-indicator">Puzzle 1 of 5</p>
+
+    <div class="card speech-card flex-container">
+        <div class="card-image image-container">
+            <div class="avatar-placeholder">B</div>
+        </div>
+        <div class="card-text">
+            <h2>Bob</h2>
+            <p>You push open the door and find Frederick's desk in chaos - papers everywhere, three monitors
+                all showing different error messages, and a very stressed-looking colleague standing over it.</p>
+            <p>"Oh, thank goodness," they say. "I'm Bob. I've been trying to sort this out for an hour and
+                I'm getting nowhere. There's a code hidden somewhere in this mess - I think it's on the table
+                behind you. Can you help me find it?"</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>What's the code Bob needs?</h2>
+        <p>(Use the papers on the table to work it out)</p>
+
+        <form class="puzzle-form" data-reveals="next-step">
+            <label for="answer">Code:</label>
+            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="quantum duck override" required>
+
+            <button type="submit" class="btn">Give Bob the code</button>
+            <p class="error-message"></p>
+        </form>
+
+        <!-- TESTING AID: remove this before giving the site to players -->
+        <p class="dev-hint">Testing hint: answer is "quantum duck override"</p>
+    </div>
+
+    <div id="next-step" class="hidden">
+        <div class="card speech-card flex-container">
+            <div class="card-image image-container">
+                <img src="../assets/img/happy.png" alt="Frederick the duck, delighted">
+            </div>
+            <div class="card-text">
+                <p>Bob's shoulders drop with relief. "That's it! Thank you, that's one thing fixed. There's
+                    still so much more to do though..."</p>
+                <br>
+                <a href="puzzle-2.html" class="btn btn-puzzle z-depth-0 waves-effect">Keep going</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <img src="../assets/img/long-footer-colour.png" alt="Footer">
+
+    <!-- Scripts -->
+    <script src="../assets/js/puzzle.js"></script>
+
+</body>
+
+</html>

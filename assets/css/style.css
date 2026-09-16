@@ -20,11 +20,13 @@ header {
 h1 {
     margin: 0;
     text-align: center;
+    flex: 1;
 }
 
-.page-image {
-    width: 200px;
-    height: auto;
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 main {
@@ -42,17 +44,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-}
-
-.button {
-    background-color: #4c04aa;
-    border: none;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 footer {
@@ -101,90 +93,6 @@ h2 {
     padding: 5px;
 }
 
-.hidden {
-    display: none;
-}
-
-.expandable-content-data,
-.expandable-content-process,
-.expandable-content-story {
-    display: none;
-    border: 1px solid grey;
-    opacity: 0.8;
-}
-
-.expandable-content-data.show,
-.expandable-content-process.show,
-.expandable-content-story.show {
-    animation: expand-content 1s ease-in-out forwards;
-}
-
-@keyframes expand-content {
-    from {
-        transform: scale(0.8, 0);
-        opacity: 0.8;
-    }
-
-    to {
-        transform: scale(1, 1);
-        opacity: 1;
-    }
-}
-
-.hidden {
-    display: none
-}
-
-.hiddenPipelineDiv {
-    display: none;
-}
-
-.hiddenButtonDiv {
-    display: none;
-}
-
-.froyo-card:before {
-    content: "Subject: Sabotaging Ice Cream Figures!";
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #666;
-}
-
-.froyo-card {
-    background-color: #f4fbff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.froyo-card p {
-    font-family: sans-serif;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-.action-highlight {
-    font-weight: bold;
-    color: rgb(4, 194, 4);
-}
-
-.form-group {
-    display: grid;
-    grid-template-columns: 1fr auto auto auto;
-    grid-gap: 10px;
-    margin-bottom: 1rem;
-    width: auto
-}
-
-label {
-    width: auto
-}
-
-.input-field {
-    width: auto
-}
-
 .flex-container {
     display: flex;
 }
@@ -194,7 +102,88 @@ label {
     max-height: 100%;
 }
 
-.email-container {
-    max-width: 700px;
-    margin: 0 auto;
+.hidden {
+    display: none;
+}
+
+.action-highlight {
+    font-weight: bold;
+    color: rgb(4, 194, 4);
+}
+
+.progress-indicator {
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    margin: 0 10px;
+}
+
+.avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.puzzle-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.puzzle-form .puzzle-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.puzzle-form .input-incorrect {
+    border-color: #e41405;
+    background-color: #fdeaea;
+}
+
+.error-message {
+    color: #e41405;
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+/* Testing aid only - remove before handing the site to players */
+.dev-hint {
+    background-color: #fff8e1;
+    border: 1px dashed #f9a825;
+    color: #7a5c00;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+.confetti-piece {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    opacity: 0.9;
+    animation: confetti-fall linear forwards;
+    z-index: 1000;
+}
+
+@keyframes confetti-fall {
+    to {
+        transform: translateY(105vh) rotate(360deg);
+    }
 }

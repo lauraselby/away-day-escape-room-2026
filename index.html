@@ -12,45 +12,85 @@
     <!-- style sheet -->
     <link rel="stylesheet" href="assets/css/style.css" media="all">
 
-    <title>Statistics away day</title>
+    <title>Reboot Frederick</title>
 
 </head>
 
 <body class="grey lighten-4">
 
     <header>
-        <!-- <img src="assets/img/logo.png" alt="Website Logo"> -->
-        <h1>Statistics away day</h1>
+        <img src="assets/img/frederick.png" alt="Reboot Frederick logo" class="logo">
+        <h1>Reboot Frederick</h1>
     </header>
 
     <!-- Main Content -->
 
     <div class="card speech-card flex-container">
         <div class="card-image image-container">
-            <img src="assets/img/bye.png" alt="Image Description">
+            <img src="assets/img/bye.png" alt="Frederick the duck, waving">
         </div>
         <div class="card-text">
-            <h2>Hello!</h2>
+            <h2>An urgent message from Frederick</h2>
 
-            <p>Well done for finding my website. I'll be your assistant throughout, I'll keep you on the right track
-                for getting this issue corrected and your statistics republished in no time! </p>
+            <p>"Whoever finds this - something has gone very wrong. I can't explain everything here, it isn't
+                safe. But I need your help.</p>
 
-            <p>Each stage will have a solution to enter before you can move on.</p>
-            <p>Find the relevant puzzle, figure it out and then enter the solution.</p>
-            <p>Please don't just try guessing everything, you're only fooling yourselves if you do...</p>
+            <p>I can't tell you where to find me, or rather, <em>when</em>. Not unless you can prove you're
+                paying attention.</p>
 
+            <p>Work out the year, and the coordinates, and meet me there.</p>
+
+            <p>Don't be late.</p>
+
+            <p>- F"</p>
         </div>
     </div>
 
-    <div class="card" style="text-align: center;">
-        <a href="questions/cop-greeting.html" class="btn">Let's go!</a>
+    <br>
+
+    <div class="card">
+        <h2>Where - and when - is Frederick?</h2>
+        <p>(Use the papers on the table to work out both answers)</p>
+
+        <form class="puzzle-form" data-reveals="next-step">
+            <label for="year">Year:</label>
+            <input type="text" class="puzzle-input" id="year" name="year" data-answer="2036" required>
+
+            <label for="coordinates">Coordinates:</label>
+            <input type="text" class="puzzle-input" id="coordinates" name="coordinates"
+                data-answer="110.54.327" required>
+
+            <button type="submit" class="btn">Travel there</button>
+            <p class="error-message"></p>
+        </form>
+
+        <!-- TESTING AID: remove this before giving the site to players -->
+        <p class="dev-hint">Testing hint: year is "2036", coordinates is "110.54.327"</p>
+    </div>
+
+    <div id="next-step" class="hidden">
+        <div class="card speech-card flex-container">
+            <div class="card-image image-container">
+                <img src="assets/img/happy.png" alt="Frederick the duck, delighted">
+            </div>
+            <div class="card-text">
+                <p>The room shudders, the lights flicker - and when they come back on, everything looks
+                    different.</p>
+                <p>You've made it. Now to find out what's really going on.</p>
+                <br>
+                <a href="questions/meet-hop.html" class="btn btn-puzzle z-depth-0 waves-effect">Look around</a>
+            </div>
+        </div>
     </div>
 
     <br>
     <br>
 
     <!-- Footer -->
-    <img src="assets/img/long-footer-colour.png" alt="Image Description">
+    <img src="assets/img/long-footer-colour.png" alt="Footer">
+
+    <!-- Scripts -->
+    <script src="assets/js/puzzle.js"></script>
 
 </body>
 

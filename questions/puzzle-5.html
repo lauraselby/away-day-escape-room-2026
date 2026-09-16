@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- prevent caching issue -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../assets/css/style.css" media="all">
+
+    <title>Reboot Frederick - Puzzle 5</title>
+
+</head>
+
+<body class="grey lighten-4">
+
+    <header>
+        <img src="../assets/img/frederick.png" alt="Reboot Frederick logo" class="logo">
+        <h1>Reboot Frederick</h1>
+    </header>
+
+    <p class="progress-indicator">Puzzle 5 of 5</p>
+
+    <div class="card speech-card flex-container">
+        <div class="card-image image-container">
+            <div class="avatar-placeholder">L</div>
+        </div>
+        <div class="card-text">
+            <h2>Leo</h2>
+            <p>Last of all is Leo, sitting beside a dark, unresponsive lamp on the corner of the desk.
+                "Silly as it sounds," Leo says, "I don't think we get anywhere near Frederick again until this is
+                back on. He's very particular about his desk lamp."</p>
+            <p>"There should be one last code on the table to bring it back to life."</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>What's the code Leo needs?</h2>
+        <p>(Use the papers on the table to work it out)</p>
+
+        <form class="puzzle-form" data-reveals="next-step">
+            <label for="answer">Code:</label>
+            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="hollow lantern glows" required>
+
+            <button type="submit" class="btn">Give Leo the code</button>
+            <p class="error-message"></p>
+        </form>
+
+        <!-- TESTING AID: remove this before giving the site to players -->
+        <p class="dev-hint">Testing hint: answer is "hollow lantern glows"</p>
+    </div>
+
+    <div id="next-step" class="hidden">
+        <div class="card speech-card flex-container">
+            <div class="card-image image-container">
+                <img src="../assets/img/happy.png" alt="Frederick the duck, delighted">
+            </div>
+            <div class="card-text">
+                <p>The lamp flickers on. "That's everything fixed," Leo says. "Now - back to the desk. Let's see
+                    what Frederick's been hiding."</p>
+                <br>
+                <a href="final-puzzle.html" class="btn btn-puzzle z-depth-0 waves-effect">Back to the desk</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <img src="../assets/img/long-footer-colour.png" alt="Footer">
+
+    <!-- Scripts -->
+    <script src="../assets/js/puzzle.js"></script>
+
+</body>
+
+</html>
