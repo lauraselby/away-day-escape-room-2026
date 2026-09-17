@@ -40,3 +40,51 @@ document.querySelectorAll('form.puzzle-form').forEach((form) => {
     }
   });
 });
+
+// Multiple-choice variant, for puzzles where players pick the correct
+// option instead of typing a code.
+//
+// Usage in HTML:
+//   <div class="choice-group" data-reveals="next-step">
+//     <button type="button" class="choice-option" data-correct="true">...</button>
+//     <button type="button" class="choice-option" data-correct="false">...</button>
+//     ...
+//   </div>
+//   <p class="error-message"></p>
+//   <div id="next-step" class="hidden"> ... link to the next page ... </div>
+
+document.querySelectorAll('.choice-group').forEach((group) => {
+  const errorMessage = group.parentElement.querySelector('.error-message');
+  const revealTarget = document.getElementById(group.dataset.reveals);
+
+  group.querySelectorAll('.choice-option').forEach((option) => {
+    option.addEventListener('click', () => {
+      const correct = option.dataset.correct === 'true';
+
+      if (correct) {
+        if (errorMessage) errorMessage.textContent = '';
+        group.classList.add('hidden');
+        if (revealTarget) revealTarget.classList.remove('hidden');
+      } else {
+        option.classList.add('input-incorrect');
+        if (errorMessage) errorMessage.textContent = 'Not quite the right page - have another look and try again.';
+      }
+    });
+  });
+});
+
+// Plain reveal-on-click, for pacing a page into stages with no correctness
+// check (e.g. "click here when you're ready" before the real puzzle).
+//
+// Usage in HTML:
+//   <button type="button" class="reveal-btn" data-reveals="dials-section">I'm ready</button>
+//   <div id="dials-section" class="hidden"> ... </div>
+
+document.querySelectorAll('.reveal-btn').forEach((button) => {
+  const revealTarget = document.getElementById(button.dataset.reveals);
+
+  button.addEventListener('click', () => {
+    button.classList.add('hidden');
+    if (revealTarget) revealTarget.classList.remove('hidden');
+  });
+});

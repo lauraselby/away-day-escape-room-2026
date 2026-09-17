@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <!-- prevent caching issue -->
+
+    <meta charset="UTF-8">    <!-- prevent caching issue -->
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
@@ -26,7 +27,7 @@
         <h1>Reboot Frederick</h1>
     </header>
 
-    <p class="progress-indicator">Puzzle 5 of 5</p>
+    <p class="progress-indicator">Puzzle 5 of 7</p>
 
     <div class="card speech-card flex-container">
         <div class="card-image image-container">
@@ -34,27 +35,46 @@
         </div>
         <div class="card-text">
             <h2>Leo</h2>
-            <p>Last of all is Leo, sitting beside a dark, unresponsive lamp on the corner of the desk.
-                "Silly as it sounds," Leo says, "I don't think we get anywhere near Frederick again until this is
-                back on. He's very particular about his desk lamp."</p>
-            <p>"There should be one last code on the table to bring it back to life."</p>
+            <p>Next up is Leo, standing over a large grid taped to the table, five odd-shaped pieces already
+                sitting in the top right corner, each marked with an "X".</p>
+            <p>"One more thing before we can get back to Frederick," Leo says, sliding over a printed note.</p>
         </div>
     </div>
 
     <div class="card">
-        <h2>What's the code Leo needs?</h2>
-        <p>(Use the papers on the table to work it out)</p>
+        <div class="email-quote">Help!
+
+We need to send an urgent biscuit survey out to the people of Birmingham!
+
+Above represents the area we wish to survey, with an equal pool of participants in each grid square (like an LSOA), except from the shaded area which is a canal.
+
+We asked Frederick for help, but all he produced were these odd equal shapes. You need to lay the shapes on the map to create equally sized aggregated areas (like MSOAs). You cannot overlap with the outside border, or the grey canal in the centre, as this will cause your aggregated areas to no longer be equally sized.
+
+I have a hunch where the "X" shaped area goes, so I have placed this already, marked by the 5 X's in the top right of the grid.
+
+So we can create cluster samples to send out our biscuit survey to, please place the rest of the area shapes.
+
+I'm told there is a hidden message hiding under the "T" shaped area that Frederick might be interested in?
+
+The shapes do not require you to flip them, they should all fit grey side up.</div>
+        <p>"The pentomino pieces and the grid are both on the table," Leo adds. "Once everything's placed,
+            there's meant to be a message hiding underneath one of them."</p>
+    </div>
+
+    <div class="card">
+        <h2>What's the hidden message?</h2>
+        <p>(Place all the pentomino pieces on the grid, then check underneath the "T" shaped piece)</p>
 
         <form class="puzzle-form" data-reveals="next-step">
-            <label for="answer">Code:</label>
-            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="hollow lantern glows" required>
+            <label for="answer">Message:</label>
+            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="duck" required>
 
-            <button type="submit" class="btn">Give Leo the code</button>
+            <button type="submit" class="btn">Give Leo the answer</button>
             <p class="error-message"></p>
         </form>
 
         <!-- TESTING AID: remove this before giving the site to players -->
-        <p class="dev-hint">Testing hint: answer is "hollow lantern glows"</p>
+        <p class="dev-hint">Testing hint: answer is "duck" (placeholder - update once the real pentomino grid is finalised)</p>
     </div>
 
     <div id="next-step" class="hidden">
@@ -63,10 +83,13 @@
                 <img src="../assets/img/happy.png" alt="Frederick the duck, delighted">
             </div>
             <div class="card-text">
-                <p>The lamp flickers on. "That's everything fixed," Leo says. "Now - back to the desk. Let's see
-                    what Frederick's been hiding."</p>
+                <p>Leo laughs. "Of course it was that. Every household in Birmingham gets a fair shot at the
+                    biscuit survey now - nobody's left out just because the grid didn't line up neatly. That's
+                    the whole point, isn't it - serving everyone's interests, not just the ones that are easy
+                    to reach."</p>
+                <p>"One more thing to sort before we're done. Come on."</p>
                 <br>
-                <a href="final-puzzle.html" class="btn">Back to the desk</a>
+                <a href="puzzle-6.html" class="btn">Keep going</a>
             </div>
         </div>
     </div>

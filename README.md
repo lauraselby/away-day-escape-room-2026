@@ -8,7 +8,7 @@ See [escape-room-context.txt](escape-room-context.txt) for the story outline.
 ## Structure
 
 - `index.html` - Frederick's opening message and the year/coordinates gate
-- `questions/` - one HTML page per story beat (`meet-hop.html`, `puzzle-1.html` … `puzzle-5.html`,
+- `questions/` - one HTML page per story beat (`meet-hop.html`, `puzzle-1.html` … `puzzle-7.html`,
   `final-puzzle.html`, `end-game.html`)
 - `assets/js/puzzle.js` - single generic answer-checker shared by every puzzle page
 - `assets/css/style.css` - shared styling

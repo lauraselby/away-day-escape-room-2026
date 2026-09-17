@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <!-- prevent caching issue -->
+
+    <meta charset="UTF-8">    <!-- prevent caching issue -->
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
@@ -26,7 +27,7 @@
         <h1>Reboot Frederick</h1>
     </header>
 
-    <p class="progress-indicator">Puzzle 1 of 5</p>
+    <p class="progress-indicator">Puzzle 1 of 7</p>
 
     <div class="card speech-card flex-container">
         <div class="card-image image-container">
@@ -36,26 +37,34 @@
             <h2>Bob</h2>
             <p>You push open the door and find Frederick's desk in chaos - papers everywhere, three monitors
                 all showing different error messages, and a very stressed-looking colleague standing over it.</p>
-            <p>"Oh, thank goodness," they say. "I'm Bob. I've been trying to sort this out for an hour and
-                I'm getting nowhere. There's a code hidden somewhere in this mess - I think it's on the table
-                behind you. Can you help me find it?"</p>
+            <p>"Oh, thank goodness," they say. "I'm Bob. This morning we published the results of the annual
+                Circular Snacks Consumption Survey (CSCS) - an 87% response rate, best in the survey's
+                history."</p>
+            <p>"There's a lot of interest in this release - the department's committed to improving the
+                nation's healthy eating habits. The Head of Healthy Circular Snack Policy asked Frederick to
+                estimate how many people in the UK are eating circular fruits, one of the snack categories in
+                the survey, using the survey data and the UK population estimate."</p>
+            <p>"Before that estimate goes anywhere, I need someone to check Frederick's workings - he's
+                sometimes a little... prone to hallucinating. Could you look over his briefing note on the
+                table and see if anything's wrong?"</p>
         </div>
     </div>
 
     <div class="card">
-        <h2>What's the code Bob needs?</h2>
-        <p>(Use the papers on the table to work it out)</p>
+        <h2>Correct Frederick's briefing note</h2>
+        <p>(Read through Frederick's printed briefing note on the table. There are 3 mistakes in his
+            workings - correct all three and they'll spell out a one-word solution.)</p>
 
         <form class="puzzle-form" data-reveals="next-step">
-            <label for="answer">Code:</label>
-            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="quantum duck override" required>
+            <label for="answer">Solution:</label>
+            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="apricot" required>
 
-            <button type="submit" class="btn">Give Bob the code</button>
+            <button type="submit" class="btn">Send Bob the answer</button>
             <p class="error-message"></p>
         </form>
 
         <!-- TESTING AID: remove this before giving the site to players -->
-        <p class="dev-hint">Testing hint: answer is "quantum duck override"</p>
+        <p class="dev-hint">Testing hint: answer is "apricot" (placeholder - update once the real briefing note and its 3 errors are finalised)</p>
     </div>
 
     <div id="next-step" class="hidden">
@@ -64,8 +73,12 @@
                 <img src="../assets/img/happy.png" alt="Frederick the duck, delighted">
             </div>
             <div class="card-text">
-                <p>Bob's shoulders drop with relief. "That's it! Thank you, that's one thing fixed. There's
-                    still so much more to do though..."</p>
+                <p>Bob's shoulders drop with relief. "That's a much more sensible estimate - thank you.
+                    Most people would've just taken Frederick's word for it. Questioning the machine instead
+                    of trusting it blindly - that's exactly the kind of technical innovation this place could
+                    use more of."</p>
+                <p>"Frederick's workings can't be trusted right now. There's still so much more to check
+                    though..."</p>
                 <br>
                 <a href="puzzle-2.html" class="btn">Keep going</a>
             </div>

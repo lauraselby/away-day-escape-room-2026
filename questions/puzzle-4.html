@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <!-- prevent caching issue -->
+
+    <meta charset="UTF-8">    <!-- prevent caching issue -->
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
@@ -26,7 +27,7 @@
         <h1>Reboot Frederick</h1>
     </header>
 
-    <p class="progress-indicator">Puzzle 4 of 5</p>
+    <p class="progress-indicator">Puzzle 4 of 7</p>
 
     <div class="card speech-card flex-container">
         <div class="card-image image-container">
@@ -34,26 +35,32 @@
         </div>
         <div class="card-text">
             <h2>Nora</h2>
-            <p>Sam waves you over to Nora, who is crouched by a machine that has ground to a complete halt.
-                "It just stopped," Nora says. "No warning, no error - just Frederick being Frederick."</p>
-            <p>"I think there's a reset code somewhere on the table. See what you can find?"</p>
+            <p>Dr Baker waves you over to Nora, who is pacing by a stack of takeaway menus, phone clamped to
+                her ear. "Private Office are in a panic," she says, hanging up. "The new Minister for Circular
+                Snacks is on their way, and no-one's ordered snacks for the meeting room."</p>
+            <p>"It's departmental tradition to welcome new ministers with a tray of their favourite doughnut -
+                but the Minister's personnel file got shredded during a routine 'paperless working' exercise.
+                All I can remember is that fruit-based fillings are banned from meetings. Something about them
+                escaping onto ministerial submissions and leaving a sticky mess."</p>
+            <p>"There's a sheet of doughnuts on the table. Can you work out which one is safe to serve?"</p>
         </div>
     </div>
 
     <div class="card">
-        <h2>What's the code Nora needs?</h2>
-        <p>(Use the papers on the table to work it out)</p>
+        <h2>Which doughnut should Private Office serve?</h2>
+        <p>(Review the doughnut printout on the table and rule out anything that breaks the rules - enter the
+            letter of the correct doughnut)</p>
 
         <form class="puzzle-form" data-reveals="next-step">
-            <label for="answer">Code:</label>
-            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="midnight compass drifts" required>
+            <label for="answer">Doughnut:</label>
+            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="c" required>
 
-            <button type="submit" class="btn">Give Nora the code</button>
+            <button type="submit" class="btn">Send Nora the answer</button>
             <p class="error-message"></p>
         </form>
 
         <!-- TESTING AID: remove this before giving the site to players -->
-        <p class="dev-hint">Testing hint: answer is "midnight compass drifts"</p>
+        <p class="dev-hint">Testing hint: answer is "C" (placeholder - update once the real doughnut sheet and its clues are finalised)</p>
     </div>
 
     <div id="next-step" class="hidden">
@@ -62,8 +69,10 @@
                 <img src="../assets/img/happy.png" alt="Frederick the duck, delighted">
             </div>
             <div class="card-text">
-                <p>The machine whirs back to life. "You're a lifesaver," says Nora. "One more to go, I think,
-                    and then it's back to Frederick's desk."</p>
+                <p>Nora exhales. "Perfect - crisis averted. Working that out calmly and clearly, under
+                    pressure, with the Minister two minutes out... that's exactly the kind of communication
+                    this department needs when things go sideways."</p>
+                <p>"One more to go, I think, and then it's back to Frederick's desk."</p>
                 <br>
                 <a href="puzzle-5.html" class="btn">Keep going</a>
             </div>

@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <!-- prevent caching issue -->
+
+    <meta charset="UTF-8">    <!-- prevent caching issue -->
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
@@ -26,35 +27,61 @@
         <h1>Reboot Frederick</h1>
     </header>
 
-    <p class="progress-indicator">Puzzle 3 of 5</p>
+    <p class="progress-indicator">Puzzle 3 of 7</p>
 
     <div class="card speech-card flex-container">
         <div class="card-image image-container">
-            <div class="avatar-placeholder">S</div>
+            <div class="avatar-placeholder">RB</div>
         </div>
         <div class="card-text">
-            <h2>Sam</h2>
-            <p>Priya leads you over to Sam, who is staring blankly at a garbled printout. "It's completely
-                scrambled," Sam sighs. "Frederick's idea of a joke, I assume."</p>
-            <p>"There should be something on the table to help make sense of it. I really need this sorted
-                before anyone else notices."</p>
+            <h2>Dr Rebecca Baker</h2>
+            <p>Priya leads you over to Dr Rebecca Baker, who skids around the corner clutching a printed
+                email, breathless. "Thank goodness - I need eyes on this immediately. This went round to
+                everyone about ten minutes ago."</p>
         </div>
     </div>
 
     <div class="card">
-        <h2>What's the code Sam needs?</h2>
-        <p>(Use the papers on the table to work it out)</p>
+        <div class="email-quote">URGENT: OSR VISIT TODAY
+To: All Analysts
 
-        <form class="puzzle-form" data-reveals="next-step">
-            <label for="answer">Code:</label>
-            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="broken teapot spins" required>
+The Office for Snack Regulation (OSR) will arrive in 15 minutes to investigate a complaint regarding the Minister's use of doughnut statistics. OSR has asked whether the Department follows the Standards for Public Use of Statistics. If we cannot demonstrate compliance, the Minister must spend the rest of the day answering Parliamentary Questions on Doughnut Methodology.
 
-            <button type="submit" class="btn">Give Sam the code</button>
-            <p class="error-message"></p>
-        </form>
+All statisticians must urgently review the relevant OSR guidance on standards for public use of statistics with required practices. Please select the appropriate link on our intranet to swot up.
+
+Sweetly,
+Dr Rebecca Baker</div>
+        <p>"That's from me, this morning - but with everything else that's gone wrong today I can't for the
+            life of me remember which intranet page it's supposed to link to. Can you find the right one
+            before OSR arrives?"</p>
+    </div>
+
+    <div class="card">
+        <h2>Which guidance page should we open?</h2>
+        <p>(Compare each option against the OSR guidance on the table, then pick the right one)</p>
+
+        <div class="choice-group" data-reveals="next-step">
+            <button type="button" class="choice-option" data-correct="true">
+                <div class="page-thumb" style="background-color: #dceeff;">📊</div>
+                <span class="page-title">Standards for Public Use of Statistics</span>
+            </button>
+            <button type="button" class="choice-option" data-correct="false">
+                <div class="page-thumb" style="background-color: #ffe0ec;">🍩</div>
+                <span class="page-title">Doughnut Nutrition Facts</span>
+            </button>
+            <button type="button" class="choice-option" data-correct="false">
+                <div class="page-thumb" style="background-color: #fff3cd;">🎉</div>
+                <span class="page-title">Departmental Away Day Photos 2025</span>
+            </button>
+            <button type="button" class="choice-option" data-correct="false">
+                <div class="page-thumb" style="background-color: #e2f7e1;">🎨</div>
+                <span class="page-title">Circular Snacks Brand Guidelines</span>
+            </button>
+        </div>
+        <p class="error-message"></p>
 
         <!-- TESTING AID: remove this before giving the site to players -->
-        <p class="dev-hint">Testing hint: answer is "broken teapot spins"</p>
+        <p class="dev-hint">Testing hint: correct option is "Standards for Public Use of Statistics"</p>
     </div>
 
     <div id="next-step" class="hidden">
@@ -63,8 +90,9 @@
                 <img src="../assets/img/happy.png" alt="Frederick the duck, delighted">
             </div>
             <div class="card-text">
-                <p>The printout untangles itself into something readable. "Finally, that makes sense!" says Sam.
-                    "Halfway there now, I think."</p>
+                <p>Dr Baker lets out a breath. "That's it - loading it now. Whatever OSR asks us, at least
+                    we'll be standing behind the numbers properly, not just hoping they hold up."</p>
+                <p>"Halfway there, I think. Let's keep going."</p>
                 <br>
                 <a href="puzzle-4.html" class="btn">Keep going</a>
             </div>
