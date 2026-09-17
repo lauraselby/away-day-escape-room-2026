@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Decorative footer of clocks, sparkles and portals">
+  <defs>
+    <pattern id="ttFooterTile" width="300" height="80" patternUnits="userSpaceOnUse">
+      <!-- clock -->
+      <circle cx="30" cy="40" r="16" fill="none" stroke="#f4c95d" stroke-width="3"/>
+      <line x1="30" y1="40" x2="30" y2="28" stroke="#f4c95d" stroke-width="3" stroke-linecap="round"/>
+      <line x1="30" y1="40" x2="39" y2="44" stroke="#f4c95d" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="30" cy="40" r="2" fill="#f4c95d"/>
+
+      <!-- sparkle -->
+      <path d="M110 26 L114 38 L126 40 L114 42 L110 54 L106 42 L94 40 L106 38 Z" fill="#4cc9f0"/>
+
+      <!-- portal swirl -->
+      <circle cx="190" cy="40" r="16" fill="none" stroke="#9d4edd" stroke-width="3" opacity="0.9"/>
+      <circle cx="190" cy="40" r="10" fill="none" stroke="#c77dff" stroke-width="2.5" opacity="0.85"/>
+      <circle cx="190" cy="40" r="4" fill="#e0aaff"/>
+
+      <!-- small sparkle -->
+      <path d="M270 30 L273 38 L281 40 L273 42 L270 50 L267 42 L259 40 L267 38 Z" fill="#f4c95d"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="80" fill="url(#ttFooterTile)"/>
+</svg>

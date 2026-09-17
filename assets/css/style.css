@@ -1,8 +1,43 @@
+:root {
+    --accent-cyan: #4cc9f0;
+    --accent-violet: #9d4edd;
+    --accent-gold: #ffd166;
+    --ink: #1b1a55;
+}
+
 body {
     font-family: sans-serif;
-    background-color: lightblue;
+    color: #222;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    background-color: var(--ink);
+    background-image:
+        radial-gradient(1.5px 1.5px at 20px 30px, rgba(255, 255, 255, 0.7), transparent),
+        radial-gradient(2px 2px at 120px 90px, rgba(255, 255, 255, 0.5), transparent),
+        radial-gradient(1.5px 1.5px at 70px 160px, rgba(255, 255, 255, 0.6), transparent),
+        radial-gradient(2px 2px at 190px 40px, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1.5px 1.5px at 150px 210px, rgba(255, 255, 255, 0.5), transparent),
+        linear-gradient(135deg, #1b1a55 0%, #535c91 55%, #9290c3 100%);
+    background-repeat: repeat, repeat, repeat, repeat, repeat, no-repeat;
+    background-size: 220px 220px, 220px 220px, 220px 220px, 220px 220px, 220px 220px, cover;
+    background-attachment: fixed;
+}
+
+/* Alternate scene backdrops for the vault (final puzzle) and success pages */
+body.theme-vault,
+body.theme-success {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body.theme-vault {
+    background-image: linear-gradient(135deg, #3e2723 0%, #6d4c41 55%, #a1887f 100%);
+}
+
+body.theme-success {
+    background-image: linear-gradient(135deg, #0f9b8e 0%, #43cea2 50%, #f9d976 100%);
 }
 
 p {
@@ -21,12 +56,24 @@ h1 {
     margin: 0;
     text-align: center;
     flex: 1;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    color: var(--accent-gold);
+    text-shadow: 0 0 10px rgba(255, 209, 102, 0.6), 0 0 22px rgba(76, 201, 240, 0.35);
+}
+
+h2 {
+    margin-top: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-violet);
 }
 
 .logo {
     width: 50px;
     height: 50px;
     object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 0 14px rgba(76, 201, 240, 0.8), 0 0 28px rgba(157, 78, 221, 0.5);
 }
 
 main {
@@ -37,14 +84,22 @@ main {
 }
 
 .btn {
-    padding: 10px;
-    background-color: #4CAF50;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, var(--accent-violet), var(--accent-cyan));
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(76, 201, 240, 0.7);
 }
 
 footer {
@@ -60,7 +115,8 @@ img {
 .card {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--accent-gold);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
     padding: 20px;
     margin: 10px;
     width: auto;
@@ -70,16 +126,14 @@ img {
     width: 100%;
 }
 
-h2 {
-    margin-top: 0;
-}
-
 .speech-card {
     display: flex;
-    border: 2px solid black;
+    border: 2px solid var(--accent-cyan);
+    border-top: 2px solid var(--accent-cyan);
     width: auto;
     border-radius: 50px;
     align-items: center;
+    box-shadow: 0 0 18px rgba(76, 201, 240, 0.35);
 }
 
 .card-image {
@@ -108,14 +162,16 @@ h2 {
 
 .action-highlight {
     font-weight: bold;
-    color: rgb(4, 194, 4);
+    color: #b8860b;
+    text-shadow: 0 0 6px rgba(255, 209, 102, 0.5);
 }
 
 .progress-indicator {
     text-align: center;
     font-weight: bold;
-    color: #555;
+    color: var(--accent-gold);
     margin: 0 10px;
+    text-shadow: 0 0 8px rgba(255, 209, 102, 0.5);
 }
 
 .avatar-placeholder {
@@ -126,10 +182,11 @@ h2 {
     height: 80px;
     min-width: 80px;
     border-radius: 50%;
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, var(--accent-violet), var(--accent-cyan));
     color: white;
     font-size: 1.8rem;
     font-weight: bold;
+    box-shadow: 0 0 12px rgba(157, 78, 221, 0.5);
 }
 
 .puzzle-form label {
@@ -147,6 +204,12 @@ h2 {
     max-width: 300px;
     box-sizing: border-box;
     margin-bottom: 15px;
+}
+
+.puzzle-form .puzzle-input:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 8px rgba(76, 201, 240, 0.6);
 }
 
 .puzzle-form .input-incorrect {
