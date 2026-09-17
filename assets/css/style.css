@@ -68,6 +68,16 @@ h2 {
     color: var(--accent-violet);
 }
 
+.dept-tagline {
+    text-align: center;
+    margin: -12px 0 12px;
+    font-style: italic;
+    color: var(--accent-gold);
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
 .logo {
     width: 50px;
     height: 50px;
