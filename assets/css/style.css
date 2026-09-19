@@ -199,6 +199,13 @@ img {
     box-shadow: 0 0 12px rgba(157, 78, 221, 0.5);
 }
 
+.npc-avatar {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-shadow: 0 0 12px rgba(157, 78, 221, 0.5);
+}
+
 .puzzle-form label {
     display: block;
     margin-bottom: 5px;
