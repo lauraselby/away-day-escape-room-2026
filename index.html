@@ -39,17 +39,17 @@
         <div class="card-text">
             <h2>An urgent message from Frederick</h2>
 
-            <p>"Whoever finds this - something has gone very wrong. I can't explain everything here, it isn't
-                safe. But I need your help.</p>
+            <p>"Whoever finds this - something has gone very wrong. I can't explain everything here, there
+                isn't time. But I need your help.</p>
 
-            <p>I can't tell you where to find me, or rather, <em>when</em>. Not unless you can prove you're
-                paying attention.</p>
+            <p>I need you to get to me, this version of me, in the future. I've attached some data I've been
+                tracking - these biscuits, they aren't good for me.</p>
 
             <p>Work out the year, and the coordinates, and meet me there.</p>
 
-            <p>Don't be late.</p>
+            <p>Please hurry.</p>
 
-            <p>- F"</p>
+            <p>- Frederick"</p>
         </div>
     </div>
 
@@ -63,16 +63,19 @@
             <label for="year">Year:</label>
             <input type="text" class="puzzle-input" id="year" name="year" data-answer="2036" required>
 
-            <label for="coordinates">Coordinates:</label>
-            <input type="text" class="puzzle-input" id="coordinates" name="coordinates"
-                data-answer="110.54.327" required>
+            <label>Coordinates:</label>
+            <p>
+                <input type="text" class="puzzle-input inline-input" id="lat" name="lat" data-answer="52" required>&deg;N
+                &nbsp;&nbsp;
+                <input type="text" class="puzzle-input inline-input" id="long" name="long" data-answer="193" required>&deg;W
+            </p>
 
             <button type="submit" class="btn">Travel there</button>
             <p class="error-message"></p>
         </form>
 
         <!-- TESTING AID: remove this before giving the site to players -->
-        <p class="dev-hint">Testing hint: year is "2036", coordinates is "110.54.327"</p>
+        <p class="dev-hint">Testing hint: year is "2036", coordinates are 52&deg;N, 193&deg;W</p>
     </div>
 
     <div id="next-step" class="hidden">

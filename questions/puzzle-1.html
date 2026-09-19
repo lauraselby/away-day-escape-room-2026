@@ -33,17 +33,17 @@
 
     <div class="card speech-card flex-container">
         <div class="card-image image-container">
-            <img src="../assets/img/fox_help.jpg" alt="Fox, looking worried" class="npc-avatar">
+            <img src="../assets/img/fox_help.jpg" alt="Dorian the Fox, looking worried" class="npc-avatar">
             <div class="name-badge">
-                <span class="name-badge-name">Fox</span>
-                <span class="name-badge-role">Donut and Holey Confectionery Customer Insight</span>
+                <span class="name-badge-name">Dorian</span>
+                <span class="name-badge-role">Head of the Circular Fruits Analysis Team</span>
             </div>
         </div>
         <div class="card-text">
-            <h2>Fox</h2>
-            <p>You push open the door and find Frederick's desk in chaos - papers everywhere, three monitors
-                all showing different error messages, and a very stressed-looking colleague standing over it.</p>
-            <p>"Oh, thank goodness," they say. "I'm Fox. This morning we published the results of the annual
+            <h2>Dorian</h2>
+            <p>You head to Frederick's desk, a quick glimpse of chaos before a very stressed-looking colleague
+                pulls you aside.</p>
+            <p>"Oh, thank goodness," they say. "I'm Dorian. This morning we published the results of the annual
                 Circular Snacks Consumption Survey (CSCS) - an 87% response rate, best in the survey's
                 history."</p>
             <p>"There's a lot of interest in this release - the department's committed to improving the
@@ -51,42 +51,44 @@
                 estimate how many people in the UK are eating circular fruits, one of the snack categories in
                 the survey, using the survey data and the UK population estimate."</p>
             <p>"Before that estimate goes anywhere, I need someone to check Frederick's workings - he's
-                sometimes a little... prone to hallucinating. Could you look over his briefing note on the
-                table and see if anything's wrong?"</p>
+                sometimes a little... prone to hallucinating. Could you look over his workings out, correct the
+                three mistakes and then let me know the correct estimate?"</p>
         </div>
     </div>
 
     <div class="card">
         <h2>Correct Frederick's briefing note</h2>
         <p>(Read through Frederick's printed briefing note on the table. There are 3 mistakes in his
-            workings - correct all three and they'll spell out a one-word solution.)</p>
+            workings - correct all three and give the corrected estimate.)</p>
 
         <form class="puzzle-form" data-reveals="next-step">
-            <label for="answer">Solution:</label>
-            <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="apricot" required>
+            <label for="answer">Corrected estimate:</label>
+            <p>In 2036, an estimated
+                <input type="text" class="puzzle-input inline-input" id="answer" name="answer" data-answer="63.9" required>
+                million people ate circular fruits.</p>
 
-            <button type="submit" class="btn">Send Fox the answer</button>
+            <button type="submit" class="btn">Send Dorian the answer</button>
             <p class="error-message"></p>
         </form>
 
         <!-- TESTING AID: remove this before giving the site to players -->
-        <p class="dev-hint">Testing hint: answer is "apricot" (placeholder - update once the real briefing note and its 3 errors are finalised)</p>
+        <p class="dev-hint">Testing hint: answer is "63.9" (placeholder - update once the real briefing note and its 3 errors are finalised)</p>
     </div>
 
     <div id="next-step" class="hidden">
         <div class="card speech-card flex-container">
             <div class="card-image image-container">
-                <img src="../assets/img/fox_happy.jpg" alt="Fox, delighted" class="npc-avatar">
+                <img src="../assets/img/fox_happy.jpg" alt="Dorian the Fox, delighted" class="npc-avatar">
             </div>
             <div class="card-text">
-                <p>Fox's shoulders drop with relief. "That's a much more sensible estimate - thank you.
+                <p>Dorian's shoulders drop with relief. "That's a much more sensible estimate - thank you.
                     Most people would've just taken Frederick's word for it. Questioning the machine instead
                     of trusting it blindly - that's exactly the kind of technical innovation this place could
                     use more of."</p>
-                <p>"Frederick's workings can't be trusted right now. There's still so much more to check
-                    though..."</p>
+                <p>"It's so frustrating - looks like we can't trust any of Frederick's workings right now.
+                    There's still so much more to check though..."</p>
                 <br>
-                <a href="puzzle-2.html" class="btn">Keep going</a>
+                <a href="puzzle-2.html" class="btn">Head back to Frederick's desk</a>
             </div>
         </div>
     </div>

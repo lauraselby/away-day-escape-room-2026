@@ -1,0 +1,316 @@
+REBOOT FREDERICK - FULL SCRIPT & CURRENT ANSWERS
+==================================================
+Generated as a working document for story/transition refinement.
+All answers below are PLACEHOLDERS (see .dev-hint comments in the HTML) -
+swap them out once the physical puzzle materials are finalised.
+
+==================================================
+PAGE: index.html (Frederick's opening message)
+==================================================
+
+[Image: bye.png - Frederick waving]
+
+"An urgent message from Frederick"
+
+"Whoever finds this - something has gone very wrong. I can't explain everything here, there isn't time. But I need your help.
+
+I need you to get to me, this version of me, in the future. I've attached some data I've been tracking, these biscuits, they aren't good for me. 
+
+Work out the year, and the coordinates, and meet me there.
+
+Please hurry.
+
+- Frederick"
+
+--- ENTRY BOX: "Where - and when - is Frederick?" ---
+(Use the papers on the table to work out both answers)
+  Year: ANSWER = 2036
+  Coordinates: ANSWER = 52N, 193W [there should be two input boxes, one __N and one ___W]
+
+--- SUCCESS ---
+[Image: happy.png - Frederick delighted]
+"The room shudders, the lights flicker - and when they come back on, everything looks different."
+"You've made it. Now to find out what's really going on."
+-> Look around
+
+
+==================================================
+PAGE: meet-hop.html
+==================================================
+Character: Harvey (A smart looking rabbit. The head of profession for statistics at the department for circular snacks - Frederick's colleague, not a puzzle-answer page)
+
+"Oh, thank goodness, you made it! I'm Harvey, Head of profession here at the Department for circular snacks - I've worked closely alongside Frederick for years, he was just a great assistant.
+
+Recently, he's become... more than that. As they say, sentient. And instead of using his new-found brainpower wisely, he's spent weeks quietly rewriting everything - reports don't add up any more, files have vanished, nothing is where it should be.
+
+I need your help to untangle what he's done, and along the way hopefully we can bring him back to his senses. His desk is as good a place as any to start."
+
+-> Head to Frederick's desk (no puzzle/answer on this page)
+
+
+==================================================
+PAGE: puzzle-1.html  (Puzzle 1 of 7)
+==================================================
+Character: Dorian the Fox, head of the Circular fruits analysis team
+Tests: "lead in technical innovation" (GSS Future Statistician report theme)
+
+"You head to Frederick's desk, a quick glimpse of chaos before a very stressed-looking colleague pulls you aside."
+
+"Oh, thank goodness," they say. "I'm Dorian. This morning we published the results of the annual Circular Snacks Consumption Survey (CSCS) - an 87% response rate, best in the survey's history."
+
+"There's a lot of interest in this release - the department's committed to improving the nation's healthy eating habits. The Head of Healthy Circular Snack Policy asked Frederick to estimate how many people in the UK are eating circular fruits, one of the snack categories in the survey, using the survey data and the UK population estimate."
+
+"Before that estimate goes anywhere, I need someone to check Frederick's workings - he's sometimes a little... prone to hallucinating. Could you look over his workings out, correct the three mistakes and then let me know the correct esitmate?"
+
+--- PUZZLE: "Correct Frederick's briefing note" ---
+(Read through Frederick's printed briefing note on the table. There are 3 mistakes in his workings -
+correct all three and give the orrected esitmate.)
+  Solution: ANSWER = 63.9 [input box should show In 2036, an estimated ___ million people ate circular fruits]
+
+--- SUCCESS ---
+"Dorian's shoulders drop with relief. 'That's a much more sensible estimate - thank you. Most people would've just taken Frederick's word for it. Questioning the machine instead of trusting it blindly - that's exactly the kind of technical innovation this place could use more of.'"
+"It's so frustrating, looks like we can't trust and of Frederick's workings right now. There's still so much more to check though..."
+-> Head back to Frederick's desk
+
+
+==================================================
+PAGE: puzzle-2.html  (Puzzle 2 of 7)  [*** WORK IN PROGRESS ***]
+==================================================
+Character: Eleanor the Squirrel - Pretzel Analytics
+Tests: "shape policy and public discourse"
+NOTE: puzzle mechanics (the email thread + uncertainty clues) 
+
+"It seems a colleague spotted you help Dorian and grabs you for another favour."
+
+"Hi I'm Eleanor, I work for Harvey in HoP office. Could you help me?" 
+
+"Frederick's been handling a lot of our communication signoffs recently. Most of his advice is actually excellent. That's what's so strange. He clearly understands good statistical practice, but Hop reckons he's been quietly rewriting departmental documents." 
+
+"This email chain was one of the last things he reviewed before he vanished. The sign-off record attached to it doesn't look quite right to me. See if you can work out which communication standards were considered during drafting, and whether Frederick has changed anything he shouldn't have." 
+
+--- PUZZLE: "What standards has Frederick considered?" ---
+(Read through the printed email thread on the table)
+  Codeword: ANSWER = 1356
+
+--- SUCCESS ---
+"Eleanor breaks into a relieved smile. 'That's it exactly. You read straight past the noise and found the bit that actually mattered - that's shaping the conversation properly, not just repeating whatever's put in front of you.'"
+"I know you're really busy, but Rebecca was asking for my help earlier and I was stumped, can I take you to him?"
+-> Go see George
+
+
+==================================================
+PAGE: puzzle-3.html  (Puzzle 3 of 7)
+==================================================
+Character: Rebecca the Rabbit - Strategic Doughnut Delivery Unit
+Tests: "champion the use of data"
+Mechanic: multiple-choice (click the correct guidance-page tile, no text entry)
+
+"Eleanor leads you over to Rebecca, who skids around the corner clutching a printed email, breathless. 'Thank goodness - I need eyes on this immediately. This went round to everyone about ten minutes ago.'"
+
+"OSR only got involved because Frederick published the Minister's doughnut consumption figures without a single caveat attached - just a bare number, no methodology note, nothing. Now they want to see we actually know what we're doing."
+
+--- Printed email shown on page ---
+URGENT: OSR VISIT TODAY
+To: All Analysts
+
+The Office for Snack Regulation (OSR) will arrive in 15 minutes to investigate a complaint regarding the Minister's use of doughnut statistics. OSR has asked whether the Department follows the Standards for Public Use of Statistics. If we cannot demonstrate compliance, the Minister must spend the rest of the day answering Parliamentary Questions on Doughnut Methodology.
+
+All statisticians must urgently review the relevant OSR guidance on standards for public use of statistics with required practices. Please select the appropriate link on our intranet to swot up.
+
+Sweetly,
+Dr Rebecca Baker
+--- end email ---
+
+"That's from me, this morning - but with everything else that's gone wrong today I can't for the life of me remember which intranet page it's supposed to link to. Can you find the right one before OSR arrives?"
+
+--- PUZZLE: "Which guidance page should we open?" ---
+(There's a bug and we've only got the images from OSRs website, do some cross checking and then pick the right one. Be careful, an incorrect choice will delay us further!)
+  Options shown as clickable tiles:
+    - image A  <-- CORRECT ANSWER
+    - image B
+    - image C
+    - image D
+
+--- SUCCESS ---
+"Rebecca lets out a breath. 'That's it - loading it now. Whatever OSR asks us, at least we'll be standing behind the numbers properly, not just hoping they hold up.'"
+-> Keep going
+
+
+==================================================
+PAGE: puzzle-4.html  (Puzzle 4 of 7)
+==================================================
+Character: Jasper the Hedgehog - Polo and Holey Confectionery Customer Insight
+Tests: "be a skilled communicator"
+
+"Did I hear you talking about doughnuts?"
+
+"Hey! Doughnuts! Can you help?"
+
+"You see another colleague running after you as you leave Rebecca's desk."
+
+"He's running with a stack of takeaway menus, phone clamped to his ear. 'Private Office are in a panic,' they say, hanging up. 'The new Minister for Circular Desserts is on their way, and no-one's ordered snacks for the meeting room.'"
+
+"It's departmental tradition to welcome new ministers with a tray of their favourite doughnut - but Frederick shredded the Minister's personnel file during a routine, and now automated, 'paperless working' exercise."
+
+"All I can remember is that fruit-based fillings are banned from meetings. Something about them escaping onto submissions and leaving a sticky mess."
+
+"Can you work out which one is safe to serve?"
+
+--- PUZZLE: "Which doughnut should Private Office serve?" ---
+(Review the preference notes and confirm the Minister's favourite flavour)
+  Doughnut: ANSWER = custard
+
+--- SUCCESS ---
+"Custard doughnuts!!!!"
+"Jasper exclaims. 'It's custard - crisis averted. Working that out calmly and clearly, under pressure, with the Minister two minutes out... that's exactly the kind of communication this department needs when things go sideways.'"
+-> What a day, lets get to Frederick!
+
+
+==================================================
+PAGE: puzzle-5.html  (Puzzle 5 of 7)
+==================================================
+Character: Elizabeth the Otter - Head of the surveys unit
+Tests: "serve public needs and interests"
+Mechanic: pentomino grid-placement puzzle
+
+"Oh hello! Sorry, do you have a second? I'm Elizabeth, head of the survey's unit."
+
+We need to send an urgent biscuit survey out to the people of Birmingham!
+
+The grid represents the area we wish to survey, with an equal pool of participants in each grid square (like an LSOA), except from the shaded area which is a canal.
+
+We asked Frederick for help, but all he produced were these odd equal shapes. You need to lay the shapes on the map to create equally sized aggregated areas (like MSOAs). You cannot overlap with the outside border, or the grey canal in the centre, as this will cause your aggregated areas to no longer be equally sized.
+
+I have a hunch where the "X" shaped area goes, so I have placed this already, marked by the 5 X's in the top right of the grid.
+
+So we can create cluster samples to send out our biscuit survey to, please place the rest of the area shapes.
+
+I'm told there is a hidden message hiding under the "T" shaped area that Frederick set as the password to launch the survey.
+
+Note [highlighted red] The shapes do not require you to flip them, they should all fit grey side up.
+
+--- PUZZLE: "What's the password?" ---
+(Place all the pentomino pieces on the grid, then check underneath the "T" shaped piece)
+  Message: ANSWER = ducks
+
+--- SUCCESS ---
+"Elizabeth laughs. 'Of course it was that. Every household in Birmingham gets a fair shot at the biscuit survey now - nobody's left out just because the grid didn't line up neatly. That's the whole point, isn't it - serving everyone's interests, not just the ones that are easy to reach.'"
+-> Now we can get to Frederick
+
+==================================================
+PAGE: puzzle-6.html  (Puzzle 6 of 7)
+==================================================
+Character: Sam the Owl - Circular Snacks Innovation Team
+Tests: "balance trade-offs to deliver" AND "deliver efficient analysis"
+Mechanic: two-stage - (1) physical maze to find lowest-carbon route, revealing 6 numbers,
+          then (2) enter those 6 numbers into 6 dials on the website.
+
+"Quick before someone else sees you, what a mess Frederick has made!"
+
+"Oh wait, you've being waved over, they're clearly stressed. 'Hi I'm Sam, we need to shift this quarter's snack data from raw collection all the way through to public release, and the Head of Profession wants the lowest-carbon route through the whole process.'"
+
+"'Frederick usually maps these out for us, but something's gone a bit haywire this time - we can't make sense of it!'"
+
+"'There's a maze on the table. The black numbers sitting on the lines are the carbon cost of each step - add those up and find the one complete route from Start to End with the lowest total.'"
+
+"'Don't add in the coloured numbers you pass through as you go though - just keep track of those separately. You'll need them in a minute.'"
+
+--- STAGE 1: reveal button ---
+"Got the route, now what?" -> reveals the dial-entry section (no answer check, just reveals form)
+
+--- STAGE 2 PUZZLE: "Set the dials" ---
+"We're told to balance timeliness with rigour, innovation with assurance, and demand with proportionality - rather than maxing out one at the expense of the rest."
+"The Head of Profession insists on seeing the receipts - did you keep track of the coloured numbers as you worked through the maze? Enter them on the dials below."
+  Dial 1 - Timeliness:      ANSWER = 5
+  Dial 2 - Rigour:          ANSWER = 3
+  Dial 3 - Innovation:      ANSWER = 6
+  Dial 4 - Assurance:       ANSWER = 9
+  Dial 5 - Demand:          ANSWER = 7
+  Dial 6 - Proportionality: ANSWER = 5
+
+--- SUCCESS ---
+"Sam grins. 'Perfect - lowest-carbon route confirmed, and nothing overcooked or underdone on any dial. That's the trick, isn't it - getting it done efficiently without just maxing out whichever bit's easiest to defend.'"
+-> He ushers you back towards Frederick's desk
+
+
+==================================================
+PAGE: puzzle-7.html  (Puzzle 7 of 7)
+==================================================
+Character: Iris (avatar image still to be added) - Strategic Crisp Delivery Unit
+Tests: "promote the value of education and continuous development"
+Mechanic: fortune-teller / cootie-catcher
+
+"You have your hand on the door handle, about to search Fredricks desk for clues to reboot him, when a hand rests on your shoulder."
+
+"I'm so sorry, one quick thing?"
+
+"I'm Iris, I need to finish off this team list maximising relevant capability to meet the needs of this high profile new cookie development project."
+
+"Frederick is messing with me, what am I supposed to do with this?"
+
+She holds up a sheet of paper covered in fold lines. 
+
+"All he left me was 'the future will show you the way, fold and see'."
+
+"Assuming that helps you, check the skills profile cards for all the staff we have available, I heard we need to agree just one more but who is it?'"
+
+--- PUZZLE: "Who should join the team?" ---
+(Build the fortune teller from the template on the table, once completed it should help you spot which team memebr is missing)
+  Name: ANSWER = Harish
+
+--- SUCCESS ---
+"Iris smiles. 'Of course, excellent choice! Frederick might be a menace right now, but he wasn't wrong about that - a team's only as strong as what it keeps learning, and who it brings in to cover what it doesn't know yet.'"
+-> Finally, you see Frederick's desk
+
+
+==================================================
+PAGE: final-puzzle.html  (theme: vault)
+==================================================
+[Image: thinker.png - Frederick thinking]
+
+"Back at Frederick's desk, everything looks a mess... Papers everywhere and is that something buzzing?."
+
+Then you spot it - a small post-it note stuck to the corner of his monitor catches your eye."
+
+A picture shows of the post it with text scrawled on - "triangles / puzzle / code."
+
+"Sure enough, on the table you find a jumble of triangular pieces. I guess if we fit them together properly and they should reveal a code."
+
+"How does this help anything?"
+
+--- INSTRUCTIONS ---
+-> I know the code!
+Input box to check
+
+If correct:
+Prompt, but were you fastest?
+Show your room facilitator, I hear there's a prize for first place! 
+
+Options:
+-> We've shown them and we were first
+-> Someone beat us to it
+
+
+==================================================
+PAGE: end-game.html  (theme: success, confetti effect plays)
+==================================================
+[Image: celebrate.png - Frederick celebrating]
+
+You see a keypad and add the code, a door opens, you hear a voice that sounds familiar.
+
+"Congratulations!"
+
+Frederick appears from behind the door, he looks normal again, no scary blank red stare. 
+
+"'You did it. Every "mess" you fixed!!!"
+
+"It was all a test, I'm totally fine! I've been watching how well you worked together under pressure.'"
+
+"'And you passed with flying colours. We have a high bar now for the future statistiican and I'm pleased to see you handled my many challenges like a pro!'"
+
+[picture of all the colleagues you helped together looking happy and applauding]
+
+"Thank you for playing, and well done for 'rescuing' Frederick!"
+
+
+
