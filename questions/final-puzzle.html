@@ -34,8 +34,8 @@
             <img src="../assets/img/thinker.png" alt="Frederick the duck, thinking">
         </div>
         <div class="card-text">
-            <p>Back at Frederick's desk, everything looks a mess... papers everywhere, and is that something
-                buzzing?</p>
+            <p>Back at Frederick's desk, everything looks a mess... papers everywhere, and his monitor is
+                buzzing softly, like it's trying to wake up.</p>
             <p>Then you spot it - a small post-it note stuck to the corner of his monitor catches your eye.</p>
             <div class="sticky-note-wrap">
                 <div class="sticky-note">triangles / puzzle / code</div>
@@ -57,14 +57,15 @@
             <h2>Enter the code</h2>
             <form class="puzzle-form" data-reveals="fastest-check">
                 <label for="code">4-digit code:</label>
-                <input type="text" class="puzzle-input" id="code" name="code" data-answer="1840" required>
+                <input type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" class="puzzle-input" id="code" name="code" data-answer="1840" required>
 
                 <button type="submit" class="btn">Unlock</button>
                 <p class="error-message"></p>
             </form>
 
-            <!-- TESTING AID: remove this before giving the site to players -->
-            <p class="dev-hint">Testing hint: code is "1840"</p>
+            <!-- TESTING AID: remove this whole block before giving the site to players -->
+            <button type="button" class="reveal-btn dev-hint-toggle" data-reveals="puzzle-hint">Reveal answer (testing only)</button>
+            <p id="puzzle-hint" class="dev-hint hidden">Testing hint: code is "1840"</p>
         </div>
     </div>
 
@@ -79,14 +80,14 @@
     </div>
 
     <div id="first-place" class="hidden">
-        <div class="card speech-card" style="text-align: center; display: block;">
+        <div class="card" style="text-align: center;">
             <p>First place - well earned! Time to see how this all turns out.</p>
             <a href="end-game.html" class="btn">Release Frederick</a>
         </div>
     </div>
 
     <div id="not-first" class="hidden">
-        <div class="card speech-card" style="text-align: center; display: block;">
+        <div class="card" style="text-align: center;">
             <p>Ah well - there's always next time. Time to see how this all turns out.</p>
             <a href="end-game.html" class="btn">Release Frederick</a>
         </div>

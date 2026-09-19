@@ -41,7 +41,8 @@
         </div>
         <div class="card-text">
             <h2>Eleanor the Squirrel</h2>
-            <p>It seems a colleague spotted you help Dorian and grabs you for another favour.</p>
+            <p>You're barely back at Frederick's desk when a colleague who spotted you help Dorian grabs you
+                for another favour.</p>
             <p>"Hi, I'm Eleanor, I work for Harvey in the HoP office. Could you help me?"</p>
             <p>"Frederick's been handling a lot of our communication signoffs recently. Most of his advice is
                 actually excellent. That's what's so strange. He clearly understands good statistical
@@ -58,17 +59,18 @@
         <p>(Read through the printed email thread on the table)</p>
 
         <form class="puzzle-form" data-reveals="next-step">
-            <label for="answer">Codeword:</label>
+            <label for="answer">Answer:</label>
             <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="1356" required>
 
-            <button type="submit" class="btn">Give Eleanor the codeword</button>
+            <button type="submit" class="btn">Give Eleanor the answer</button>
             <p class="error-message"></p>
         </form>
 
-        <!-- TESTING AID: remove this before giving the site to players -->
+        <!-- TESTING AID: remove this whole block before giving the site to players -->
         <!-- WORK IN PROGRESS: puzzle mechanics (the email thread + standards clues) still being
              designed - placeholder answer below until that's finalised -->
-        <p class="dev-hint">Testing hint: answer is "1356" (placeholder - puzzle still in design)</p>
+        <button type="button" class="reveal-btn dev-hint-toggle" data-reveals="puzzle-hint">Reveal answer (testing only)</button>
+        <p id="puzzle-hint" class="dev-hint hidden">Testing hint: answer is "1356" (placeholder - puzzle still in design)</p>
     </div>
 
     <div id="next-step" class="hidden">

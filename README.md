@@ -20,6 +20,8 @@ Each puzzle page has a `<form class="puzzle-form">` with one or more `.puzzle-in
 correct answer for each field lives in its `data-answer="..."` attribute - update these once the real
 paper puzzles are written. Matching is case-insensitive and ignores extra whitespace.
 
-Every form is currently followed by a `<p class="dev-hint">` showing the expected answer, for testing
-without the physical puzzles in hand. Delete those `.dev-hint` paragraphs (marked with a `TESTING AID`
-comment) before the site goes live for players.
+Every form is currently followed by a `<button class="reveal-btn dev-hint-toggle">Reveal answer
+(testing only)</button>` and a hidden `<p id="puzzle-hint" class="dev-hint">` showing the expected
+answer, for testing without the physical puzzles in hand - click the button to reveal it. Delete both
+the button and the `.dev-hint` paragraph (marked with a `TESTING AID` comment) before the site goes live
+for players.

@@ -170,12 +170,6 @@ img {
     display: none;
 }
 
-.action-highlight {
-    font-weight: bold;
-    color: #b8860b;
-    text-shadow: 0 0 6px rgba(255, 209, 102, 0.5);
-}
-
 .progress-indicator {
     text-align: center;
     font-weight: bold;
@@ -430,6 +424,23 @@ img {
     font-size: 0.85rem;
     margin-top: 10px;
     max-width: 300px;
+}
+
+.dev-hint-toggle {
+    display: inline-block;
+    background-color: #fff8e1;
+    border: 1px dashed #f9a825;
+    color: #7a5c00;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.dev-hint-toggle:hover {
+    background-color: #fff3c4;
 }
 
 .warning-note {
