@@ -1,10 +1,10 @@
 The escape room is a story-driven journey that begins with a time-travel setup to reach 2036, then moves the player through a series of puzzles that unlock the next part of the narrative. The end goal is to release Frederick and complete his test, with each answer entered on the website acting as the gate that lets players progress to the next stage of the story. In the room they will have access to papers and materials to give the bulk of the puzzle content.
 
-Frederick is our duck mascot for the team, he sends a message to teams inviting them to an unknown year [puzzle completed to work this out]. The message is shown on the first page of the website with a box to enter the right year and coordinates [2036] and [110.54.327].
+Frederick is our duck mascot for the team, he sends a message to teams inviting them to an unknown year [puzzle completed to work this out]. The message is shown on the first page of the website with a box to enter the right year and coordinates.
 
 Once in the right year you meet a new character, call him Hop, who explains Frederick has become a sentient AI, messed up a load of things and asks you for help. He points you to his desk to have a look.
 
-You click through a progress button and are taken to a picture of Fredericks desk. You notice it's a mess but are quickly interrupted by a new character, call them Bob, who needs your help solving puzzle 1. 
+You click through a progress button and are taken to a picture of Fredericks desk. You notice it's a mess but are quickly interrupted by a new character, who needs your help solving puzzle 1. 
 
 You're directed to a set of papers on the table and there's a 3 word code that is the answer to progress to the next part of the story. On the website you see a pleading looking Bob and a box to enter the solution. When you do he smiles and thanks you and then you are moved to the next screen. 
 
@@ -13,3 +13,7 @@ Puzzle 2, similar set up, a new person needs help, this page again should direct
 Do this three more times as placeholder puzzles / people asking for help. 
 
 At the end you finally make it back to Fredericks desk and you notice a postit note on the monitor - triangles / puzzle / code. You see a jigsaw of triangles to put together (papers on the table). You complete the puzzle and it reveals a 4 digit code to give to the room facilitator to release Frederick. Once successful they then get a message from him to say well done and that it was all just a test. 
+
+Some teams could be Pretzel Analytics, Donut and Holey Confectionary Customer Insight, Circular Snacks Innovation team and Strategic Crisp Delivery Unit.
+
+The whole escape room is tied to the GSS future statistician report. 
