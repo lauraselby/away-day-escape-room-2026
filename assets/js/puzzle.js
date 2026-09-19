@@ -53,11 +53,46 @@ document.querySelectorAll('form.puzzle-form').forEach((form) => {
 //   <p class="error-message"></p>
 //   <div id="next-step" class="hidden"> ... link to the next page ... </div>
 
+// Wrong-guess cooldown overlay, shared by every choice-group on the page.
+// Stops players from just clicking through every option back to back.
+const COOLDOWN_SECONDS = 20;
+
+function runCooldown(options) {
+  let overlay = document.getElementById('cooldown-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'cooldown-overlay';
+    overlay.className = 'cooldown-overlay hidden';
+    overlay.innerHTML = '<div class="cooldown-box">'
+      + '<p>Not quite right - the system needs a moment to reset before you try again.</p>'
+      + '<div class="cooldown-count"></div></div>';
+    document.body.appendChild(overlay);
+  }
+
+  const countEl = overlay.querySelector('.cooldown-count');
+  options.forEach((option) => { option.disabled = true; });
+  overlay.classList.remove('hidden');
+
+  let remaining = COOLDOWN_SECONDS;
+  countEl.textContent = remaining;
+
+  const tick = setInterval(() => {
+    remaining -= 1;
+    countEl.textContent = remaining;
+    if (remaining <= 0) {
+      clearInterval(tick);
+      overlay.classList.add('hidden');
+      options.forEach((option) => { option.disabled = false; });
+    }
+  }, 1000);
+}
+
 document.querySelectorAll('.choice-group').forEach((group) => {
   const errorMessage = group.parentElement.querySelector('.error-message');
   const revealTarget = document.getElementById(group.dataset.reveals);
+  const options = group.querySelectorAll('.choice-option');
 
-  group.querySelectorAll('.choice-option').forEach((option) => {
+  options.forEach((option) => {
     option.addEventListener('click', () => {
       const correct = option.dataset.correct === 'true';
 
@@ -68,6 +103,7 @@ document.querySelectorAll('.choice-group').forEach((group) => {
       } else {
         option.classList.add('input-incorrect');
         if (errorMessage) errorMessage.textContent = 'Not quite the right page - have another look and try again.';
+        runCooldown(options);
       }
     });
   });
