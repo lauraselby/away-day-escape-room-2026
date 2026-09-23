@@ -124,7 +124,7 @@ img {
 
 .card {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 14px;
     border-top: 4px solid var(--accent-gold);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
     padding: 20px;
@@ -141,7 +141,7 @@ img {
     border: 2px solid var(--accent-cyan);
     border-top: 2px solid var(--accent-cyan);
     width: auto;
-    border-radius: 50px;
+    border-radius: 20px;
     align-items: center;
     box-shadow: 0 0 18px rgba(76, 201, 240, 0.35);
 }
@@ -248,6 +248,37 @@ img {
     font-style: italic;
     line-height: 1.25;
     color: #555;
+}
+
+/* On narrow screens the avatar column gets too cramped to also fit the name
+   badge underneath it, so float the badge over the top of the text column
+   instead - keeps both readable without squeezing the photo. */
+@media (max-width: 560px) {
+    .speech-card.flex-container {
+        position: relative;
+    }
+
+    .speech-card .name-badge {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        max-width: 120px;
+        margin: 0;
+        padding: 5px 7px;
+        z-index: 3;
+    }
+
+    .speech-card .name-badge::before {
+        display: none;
+    }
+
+    .speech-card .name-badge-name {
+        font-size: 0.75rem;
+    }
+
+    .speech-card .name-badge-role {
+        font-size: 0.58rem;
+    }
 }
 
 .puzzle-form label {
