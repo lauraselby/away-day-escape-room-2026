@@ -180,8 +180,8 @@ img {
 
 .envelope-tag {
     font-weight: bold;
-    color: var(--accent-gold);
-    text-shadow: 0 0 6px rgba(255, 209, 102, 0.5);
+    color: var(--accent-violet);
+    text-shadow: 0 0 6px rgba(157, 78, 221, 0.35);
 }
 
 .progress-indicator {
