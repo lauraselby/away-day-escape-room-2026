@@ -152,6 +152,14 @@ img {
     width: 100%;
 }
 
+.scene-image {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+    border: 2px solid var(--accent-cyan);
+    box-shadow: 0 0 18px rgba(76, 201, 240, 0.35);
+}
+
 .card-text {
     flex: 1;
     padding: 5px;
@@ -376,9 +384,27 @@ img {
     box-shadow: 0 0 8px rgba(228, 20, 5, 0.4);
 }
 
+.choice-option.input-correct {
+    border-color: #2e9e3f;
+    box-shadow: 0 0 14px rgba(46, 158, 63, 0.7);
+    background-color: #eafbee;
+}
+
+.choice-option.input-correct .page-title {
+    color: #1f7a2d;
+}
+
+.choice-option.input-correct .page-title::before {
+    content: "\2714  ";
+}
+
 .choice-option:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.choice-option.input-correct:disabled {
+    opacity: 1;
 }
 
 .cooldown-overlay {
@@ -677,7 +703,7 @@ img {
     margin: 20px auto;
     max-width: 420px;
     text-align: center;
-    background: linear-gradient(135deg, rgba(255, 209, 102, 0.1), rgba(76, 201, 240, 0.08));
+    background-color: #fff8e1;
     box-shadow: 0 0 20px rgba(255, 209, 102, 0.4);
 }
 

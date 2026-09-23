@@ -98,8 +98,16 @@ document.querySelectorAll('.choice-group').forEach((group) => {
 
       if (correct) {
         if (errorMessage) errorMessage.textContent = '';
-        group.classList.add('hidden');
-        if (revealTarget) revealTarget.classList.remove('hidden');
+        options.forEach((opt) => { opt.disabled = true; });
+        option.classList.add('input-correct');
+
+        setTimeout(() => {
+          group.classList.add('hidden');
+          if (revealTarget) {
+            revealTarget.classList.remove('hidden');
+            revealTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 900);
       } else {
         option.classList.add('input-incorrect');
         if (errorMessage) errorMessage.textContent = 'Not quite the right page - have another look and try again.';
@@ -118,9 +126,13 @@ document.querySelectorAll('.choice-group').forEach((group) => {
 
 document.querySelectorAll('.reveal-btn').forEach((button) => {
   const revealTarget = document.getElementById(button.dataset.reveals);
+  // If the button lives alone in its own card (marked with .reveal-card),
+  // hide that whole card instead of just the button - otherwise clicking it
+  // leaves an empty white box behind.
+  const wrapperCard = button.closest('.reveal-card');
 
   button.addEventListener('click', () => {
-    button.classList.add('hidden');
+    (wrapperCard || button).classList.add('hidden');
     if (revealTarget) revealTarget.classList.remove('hidden');
   });
 });
