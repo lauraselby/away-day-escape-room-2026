@@ -111,16 +111,41 @@ Dr Rebecca Baker</div>
                 <img src="../assets/img/George the Rabbit happy.jpg" alt="Rebecca the Rabbit, delighted" class="npc-avatar">
             </div>
             <div class="card-text">
-                <p>Rebecca lets out a breath. "That's it - loading it now. I just need to complete this 
-                    checklist on decision making and leadership, it says "lead responsibly; be rigorous; be..."</p>
+                <p>Rebecca lets out a breath. "That's it - loading it now. I just need to complete this
+                    checklist on decision making and leadership, it says 'lead responsibly; be rigorous;
+                    be...'"</p>
+            </div>
+        </div>
 
-                    <!-- Note for Claude, I want to add in a seocnd part to this puzzle - Part 2: What does the 
-                     guidance say? Review the OSRs standards for public use of statistics, data and wider analysis, 
-                     with required practices and enter the word which completes the principle. ANSWEER = relevant-->
-                <p>                    
-                    Rebecca smiles with relief, Ok I think we're ready, we might need to work on the Minister but we 
-                    can show OSR our statisticians really do champion the use of data and make our statistics transparent 
-                    and accessible."</p>
+        <div class="card">
+            <h2>Part 2: What does the guidance say?</h2>
+            <p>(Review the OSR's Standards for Public Use of Statistics, Data and Wider Analysis, with
+                required practices, and enter the word which completes the principle)</p>
+
+            <form class="puzzle-form" data-reveals="part2-success">
+                <label for="answer">Missing word:</label>
+                <input type="text" class="puzzle-input" id="answer" name="answer" data-answer="relevant" required>
+
+                <button type="submit" class="btn">Complete the checklist</button>
+                <p class="error-message"></p>
+            </form>
+
+            <!-- TESTING AID: remove this whole block before giving the site to players -->
+            <button type="button" class="reveal-btn dev-hint-toggle" data-reveals="puzzle-hint-2">Reveal answer (testing only)</button>
+            <p id="puzzle-hint-2" class="dev-hint hidden">Testing hint: answer is "relevant" (completes "lead
+                responsibly; be rigorous; be relevant")</p>
+        </div>
+    </div>
+
+    <div id="part2-success" class="hidden">
+        <div class="card speech-card flex-container">
+            <div class="card-image image-container">
+                <img src="../assets/img/George the Rabbit happy.jpg" alt="Rebecca the Rabbit, delighted" class="npc-avatar">
+            </div>
+            <div class="card-text">
+                <p>Rebecca smiles with relief. "OK, I think we're ready - we might need to work on the
+                    Minister, but we can show OSR our statisticians really do champion the use of data and
+                    make our statistics transparent and accessible."</p>
                 <br>
                 <a href="puzzle-4.html" class="btn">Keep going</a>
             </div>

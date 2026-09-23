@@ -124,3 +124,58 @@ document.querySelectorAll('.reveal-btn').forEach((button) => {
     if (revealTarget) revealTarget.classList.remove('hidden');
   });
 });
+
+// Rotating gauge dials (puzzle 6) - the +/- buttons and typed digits both
+// move the pointer to match, purely for visual feedback. The underlying
+// .puzzle-input still drives answer-checking above.
+//
+// Usage in HTML:
+//   <div class="dial-field">
+//     <div class="dial-gauge"><div class="dial-pointer"></div></div>
+//     <div class="dial-readout">
+//       <button type="button" class="dial-step dial-step-minus">-</button>
+//       <input class="puzzle-input dial-input" maxlength="1" data-answer="5" value="0">
+//       <button type="button" class="dial-step dial-step-plus">+</button>
+//     </div>
+//   </div>
+
+document.querySelectorAll('.dial-field').forEach((field) => {
+  const input = field.querySelector('.dial-input');
+  const pointer = field.querySelector('.dial-pointer');
+  const minusBtn = field.querySelector('.dial-step-minus');
+  const plusBtn = field.querySelector('.dial-step-plus');
+  if (!input || !pointer) return;
+
+  const MIN = 0;
+  const MAX = 9;
+
+  function updatePointer() {
+    const raw = parseInt(input.value, 10);
+    const value = Number.isNaN(raw) ? MIN : Math.min(MAX, Math.max(MIN, raw));
+    const angle = -135 + (value / MAX) * 270;
+    pointer.style.transform = `rotate(${angle}deg)`;
+  }
+
+  function setValue(newValue) {
+    input.value = String(Math.min(MAX, Math.max(MIN, newValue)));
+    updatePointer();
+  }
+
+  if (minusBtn) {
+    minusBtn.addEventListener('click', () => {
+      const current = parseInt(input.value, 10);
+      setValue((Number.isNaN(current) ? MIN : current) - 1);
+    });
+  }
+
+  if (plusBtn) {
+    plusBtn.addEventListener('click', () => {
+      const current = parseInt(input.value, 10);
+      setValue((Number.isNaN(current) ? MIN - 1 : current) + 1);
+    });
+  }
+
+  input.addEventListener('input', updatePointer);
+
+  updatePointer();
+});

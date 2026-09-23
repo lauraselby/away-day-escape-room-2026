@@ -395,23 +395,124 @@ img {
 
 .dial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    gap: 12px;
-    margin: 15px 0;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    justify-items: center;
+}
+
+.dial-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Colour-coded gauge variants - match the colours on the physical maze map */
+.dial-blue { --dial-c: #2f6fd1; --dial-light: #cfe0f7; }
+.dial-violet { --dial-c: #7c3aed; --dial-light: #e4d7fb; }
+.dial-green { --dial-c: #2fa360; --dial-light: #d3f0dd; }
+.dial-orange { --dial-c: #e07b28; --dial-light: #fbe0c4; }
+.dial-gold { --dial-c: #d9a520; --dial-light: #faedc4; }
+.dial-pink { --dial-c: #d63384; --dial-light: #f8d3e6; }
+
+.dial-gauge {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: var(--dial-light, #eee);
+    border: 5px solid var(--dial-c, #999);
+    box-shadow: 0 0 12px var(--dial-c, #999);
+    margin-bottom: 10px;
+}
+
+.dial-gauge::before {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.18);
+}
+
+.dial-gauge::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px;
+    border-radius: 50%;
+    background: var(--dial-c, #333);
+    z-index: 2;
+}
+
+.dial-pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 32px;
+    margin-left: -1.5px;
+    margin-top: -32px;
+    background: var(--dial-c, #333);
+    border-radius: 2px;
+    transform-origin: bottom center;
+    transform: rotate(-135deg);
+    transition: transform 0.2s ease;
+    z-index: 1;
+}
+
+.dial-readout {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    border: 2px solid var(--dial-c, #999);
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
+.dial-step {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    border-radius: 50%;
+    border: none;
+    background: var(--dial-c, #999);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.dial-step:active {
+    transform: scale(0.9);
 }
 
 .dial-field label {
     display: block;
+    margin-top: 8px;
     font-weight: bold;
-    margin-bottom: 5px;
     font-size: 0.85rem;
+    color: var(--dial-c, #333);
 }
 
 .dial-field .dial-input {
-    width: 100%;
-    max-width: none;
+    width: 34px;
+    max-width: 34px;
+    padding: 0;
+    margin-bottom: 0;
+    border: none;
     text-align: center;
-    font-size: 1.3rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dial-c, #333);
+    background: transparent;
 }
 
 /* Testing aid only - remove before handing the site to players */
